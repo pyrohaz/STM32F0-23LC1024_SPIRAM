@@ -33,7 +33,7 @@
           <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
           <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
         </MemoryAreas>
-        <LocateLinkFile path="../../configuration/programdata/stm32f0_spiram/arm-gcc-link.ld" type="0"/>
+        <LocateLinkFile path="../../../configuration/programdata/stm32f0_spiram/arm-gcc-link.ld" type="0"/>
       </Link>
       <Output>
         <Option name="OutputFileType" value="0"/>
@@ -78,9 +78,9 @@
   <Files>
     <File name="cmsis_core/core_cm0.h" path="cmsis_core/core_cm0.h" type="1"/>
     <File name="SPI_RAM/SPI23LCXXXX.h" path="SPI23LCXXXX.h" type="1"/>
+    <File name="cmsis_core/core_cmInstr.h" path="cmsis_core/core_cmInstr.h" type="1"/>
     <File name="cmsis_boot/stm32f0xx_conf.h" path="cmsis_boot/stm32f0xx_conf.h" type="1"/>
     <File name="cmsis_boot/startup/startup_stm32f0xx.s" path="cmsis_boot/startup/startup_stm32f0xx.s" type="1"/>
-    <File name="cmsis_core/core_cmInstr.h" path="cmsis_core/core_cmInstr.h" type="1"/>
     <File name="stm32_lib/inc/stm32f0xx_rcc.h" path="stm32_lib/inc/stm32f0xx_rcc.h" type="1"/>
     <File name="cmsis_boot/system_stm32f0xx_temp.c" path="cmsis_boot/system_stm32f0xx_temp.c" type="1"/>
     <File name="cmsis_boot" path="" type="2"/>
@@ -95,8 +95,8 @@
     <File name="stm32_lib/inc" path="" type="2"/>
     <File name="stm32_lib/inc/stm32f0xx_spi.h" path="stm32_lib/inc/stm32f0xx_spi.h" type="1"/>
     <File name="stm32_lib/src/stm32f0xx_rcc.c" path="stm32_lib/src/stm32f0xx_rcc.c" type="1"/>
-    <File name="main.c" path="main.c" type="1"/>
     <File name="stm32_lib/src" path="" type="2"/>
+    <File name="main.c" path="main.c" type="1"/>
     <File name="SPI_RAM/SPI23LCXXXX.c" path="SPI23LCXXXX.c" type="1"/>
     <File name="SPI_RAM" path="" type="2"/>
     <File name="cmsis_boot/stm32f0xx.h" path="cmsis_boot/stm32f0xx.h" type="1"/>

@@ -1,26 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m0 -mthumb -Wall -ffunction-sections -g -O3 -c -DSTM32F051R8 -DSTM32F0XX_MD -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\workspace\STM32F0_SPIRAM\cmsis_core -I..\..\..\workspace\STM32F0_SPIRAM\cmsis_boot -I..\..\..\workspace -I..\..\..\workspace\STM32F0_SPIRAM\stm32_lib -I..\..\.. -I..\..\..\workspace\STM32F0_SPIRAM\stm32_lib\inc -I..\..\..\workspace\STM32F0_SPIRAM">
-      <target file="stm32f0xx_gpio.o" lastModified="149c49d2d86">
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m0 -mthumb -Wall -ffunction-sections -g -O3 -c -DSTM32F051R8 -DSTM32F0XX_MD -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\workspace -I..\..\..\workspace\STM32F0-23LC1024_SPIRAM\STM32F0_SPIRAM\stm32_lib -I..\..\..\workspace\STM32F0-23LC1024_SPIRAM -I..\..\..\workspace\STM32F0-23LC1024_SPIRAM\STM32F0_SPIRAM -I..\..\..\workspace\STM32F0-23LC1024_SPIRAM\STM32F0_SPIRAM\cmsis_core -I..\..\..\workspace\STM32F0-23LC1024_SPIRAM\STM32F0_SPIRAM\stm32_lib\inc -I..\..\..\workspace\STM32F0-23LC1024_SPIRAM\STM32F0_SPIRAM\cmsis_boot">
+      <target file="stm32f0xx_gpio.o" lastModified="149c4f1cad8">
          <source file="..\..\..\stm32_lib\src\stm32f0xx_gpio.c" lastModified="149c3ed186f"/>
       </target>
-      <target file="SPI23LCXXXX.o" lastModified="149c49d3161">
-         <source file="..\..\..\SPI23LCXXXX.c" lastModified="149c49bc49d"/>
+      <target file="SPI23LCXXXX.o" lastModified="149c4f1ce9b">
+         <source file="..\..\..\SPI23LCXXXX.c" lastModified="149c4ec8b96"/>
       </target>
-      <target file="stm32f0xx_spi.o" lastModified="149c49d28eb">
+      <target file="stm32f0xx_spi.o" lastModified="149c4f1c634">
          <source file="..\..\..\stm32_lib\src\stm32f0xx_spi.c" lastModified="149c3ed4d5b"/>
       </target>
-      <target file="stm32f0xx_rcc.o" lastModified="149c49d2487">
+      <target file="stm32f0xx_rcc.o" lastModified="149c4f1c080">
          <source file="..\..\..\stm32_lib\src\stm32f0xx_rcc.c" lastModified="149c3ed187e"/>
       </target>
-      <target file="system_stm32f0xx_temp.o" lastModified="149c49d2af4">
+      <target file="system_stm32f0xx_temp.o" lastModified="149c4f1c840">
          <source file="..\..\..\cmsis_boot\system_stm32f0xx_temp.c" lastModified="149c3ed188e"/>
       </target>
-      <target file="startup_stm32f0xx.o" lastModified="149c49d26c5">
+      <target file="startup_stm32f0xx.o" lastModified="149c4f1c33c">
          <source file="..\..\..\cmsis_boot\startup\startup_stm32f0xx.s" lastModified="149c3ed187e"/>
       </target>
-      <target file="main.o" lastModified="149c49d2619">
-         <source file="..\..\..\main.c" lastModified="149c49b9590"/>
+      <target file="main.o" lastModified="149c4f1c281">
+         <source file="..\..\..\main.c" lastModified="149c4f17cb5"/>
       </target>
    </processor>
 </history>

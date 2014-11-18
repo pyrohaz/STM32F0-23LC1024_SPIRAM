@@ -142,8 +142,6 @@ Discarded input sections
                 0x00000000       0x1c ..\obj\stm32f0xx_spi.o
  .text.SPI_GetTransmissionFIFOStatus
                 0x00000000        0xc ..\obj\stm32f0xx_spi.o
- .text.SPI_GetReceptionFIFOStatus
-                0x00000000        0xc ..\obj\stm32f0xx_spi.o
  .text.SPI_I2S_ClearFlag
                 0x00000000        0x8 ..\obj\stm32f0xx_spi.o
  .text.SPI_I2S_GetITStatus
@@ -181,14 +179,6 @@ Discarded input sections
  .text.SPI_SB   0x00000000       0x30 ..\obj\SPI23LCXXXX.o
  .text.S23_IOAccess
                 0x00000000       0xac ..\obj\SPI23LCXXXX.o
- .text.S23_RByte
-                0x00000000      0x100 ..\obj\SPI23LCXXXX.o
- .text.S23_RWord
-                0x00000000      0x1a4 ..\obj\SPI23LCXXXX.o
- .text.S23_RDWord
-                0x00000000      0x208 ..\obj\SPI23LCXXXX.o
- .text.S23_RFloat
-                0x00000000        0x8 ..\obj\SPI23LCXXXX.o
  .text.S23_WriteModeReg
                 0x00000000       0x74 ..\obj\SPI23LCXXXX.o
  .text.S23_ReadModeReg
@@ -216,7 +206,7 @@ Linker script and memory map
 
                 0x20002000                _eram = 0x20002000
 
-.text           0x08000000      0xcdc
+.text           0x08000000     0x11b4
  *(.isr_vector)
  .isr_vector    0x08000000       0xc4 ..\obj\startup_stm32f0xx.o
                 0x08000000                g_pfnVectors
@@ -228,103 +218,118 @@ Linker script and memory map
                 0x080000dc       0x18 ..\obj\stm32f0xx_rcc.o
                 0x080000dc                RCC_APB2PeriphClockCmd
  .text.startup.main
-                0x080000f4       0x64 ..\obj\main.o
+                0x080000f4       0x7c ..\obj\main.o
                 0x080000f4                main
  .text.Reset_Handler
-                0x08000158       0x4c ..\obj\startup_stm32f0xx.o
-                0x08000158                Reset_Handler
+                0x08000170       0x4c ..\obj\startup_stm32f0xx.o
+                0x08000170                Reset_Handler
  .text.Default_Handler
-                0x080001a4        0x2 ..\obj\startup_stm32f0xx.o
-                0x080001a4                TIM1_CC_IRQHandler
-                0x080001a4                HardFault_Handler
-                0x080001a4                ADC1_COMP_IRQHandler
-                0x080001a4                SysTick_Handler
-                0x080001a4                PVD_IRQHandler
-                0x080001a4                PendSV_Handler
-                0x080001a4                NMI_Handler
-                0x080001a4                I2C1_IRQHandler
-                0x080001a4                SPI1_IRQHandler
-                0x080001a4                TIM6_DAC_IRQHandler
-                0x080001a4                EXTI2_3_IRQHandler
-                0x080001a4                I2C2_IRQHandler
-                0x080001a4                TIM17_IRQHandler
-                0x080001a4                RTC_IRQHandler
-                0x080001a4                TIM16_IRQHandler
-                0x080001a4                TIM3_IRQHandler
-                0x080001a4                EXTI4_15_IRQHandler
-                0x080001a4                RCC_IRQHandler
-                0x080001a4                DMA1_Channel1_IRQHandler
-                0x080001a4                Default_Handler
-                0x080001a4                CEC_IRQHandler
-                0x080001a4                TIM14_IRQHandler
-                0x080001a4                DMA1_Channel4_5_IRQHandler
-                0x080001a4                TIM15_IRQHandler
-                0x080001a4                EXTI0_1_IRQHandler
-                0x080001a4                SPI2_IRQHandler
-                0x080001a4                SVC_Handler
-                0x080001a4                TS_IRQHandler
-                0x080001a4                WWDG_IRQHandler
-                0x080001a4                TIM2_IRQHandler
-                0x080001a4                DMA1_Channel2_3_IRQHandler
-                0x080001a4                USART2_IRQHandler
-                0x080001a4                FLASH_IRQHandler
-                0x080001a4                USART1_IRQHandler
-                0x080001a4                TIM1_BRK_UP_TRG_COM_IRQHandler
- *fill*         0x080001a6        0x2 
+                0x080001bc        0x2 ..\obj\startup_stm32f0xx.o
+                0x080001bc                TIM1_CC_IRQHandler
+                0x080001bc                HardFault_Handler
+                0x080001bc                ADC1_COMP_IRQHandler
+                0x080001bc                SysTick_Handler
+                0x080001bc                PVD_IRQHandler
+                0x080001bc                PendSV_Handler
+                0x080001bc                NMI_Handler
+                0x080001bc                I2C1_IRQHandler
+                0x080001bc                SPI1_IRQHandler
+                0x080001bc                TIM6_DAC_IRQHandler
+                0x080001bc                EXTI2_3_IRQHandler
+                0x080001bc                I2C2_IRQHandler
+                0x080001bc                TIM17_IRQHandler
+                0x080001bc                RTC_IRQHandler
+                0x080001bc                TIM16_IRQHandler
+                0x080001bc                TIM3_IRQHandler
+                0x080001bc                EXTI4_15_IRQHandler
+                0x080001bc                RCC_IRQHandler
+                0x080001bc                DMA1_Channel1_IRQHandler
+                0x080001bc                Default_Handler
+                0x080001bc                CEC_IRQHandler
+                0x080001bc                TIM14_IRQHandler
+                0x080001bc                DMA1_Channel4_5_IRQHandler
+                0x080001bc                TIM15_IRQHandler
+                0x080001bc                EXTI0_1_IRQHandler
+                0x080001bc                SPI2_IRQHandler
+                0x080001bc                SVC_Handler
+                0x080001bc                TS_IRQHandler
+                0x080001bc                WWDG_IRQHandler
+                0x080001bc                TIM2_IRQHandler
+                0x080001bc                DMA1_Channel2_3_IRQHandler
+                0x080001bc                USART2_IRQHandler
+                0x080001bc                FLASH_IRQHandler
+                0x080001bc                USART1_IRQHandler
+                0x080001bc                TIM1_BRK_UP_TRG_COM_IRQHandler
+ *fill*         0x080001be        0x2 
  .text.SPI_Init
-                0x080001a8       0x54 ..\obj\stm32f0xx_spi.o
-                0x080001a8                SPI_Init
- .text.SPI_Cmd  0x080001fc       0x18 ..\obj\stm32f0xx_spi.o
-                0x080001fc                SPI_Cmd
+                0x080001c0       0x54 ..\obj\stm32f0xx_spi.o
+                0x080001c0                SPI_Init
+ .text.SPI_Cmd  0x08000214       0x18 ..\obj\stm32f0xx_spi.o
+                0x08000214                SPI_Cmd
  .text.SPI_RxFIFOThresholdConfig
-                0x08000214       0x14 ..\obj\stm32f0xx_spi.o
-                0x08000214                SPI_RxFIFOThresholdConfig
+                0x0800022c       0x14 ..\obj\stm32f0xx_spi.o
+                0x0800022c                SPI_RxFIFOThresholdConfig
  .text.SPI_SendData8
-                0x08000228        0x4 ..\obj\stm32f0xx_spi.o
-                0x08000228                SPI_SendData8
+                0x08000240        0x4 ..\obj\stm32f0xx_spi.o
+                0x08000240                SPI_SendData8
  .text.SPI_ReceiveData8
-                0x0800022c        0x8 ..\obj\stm32f0xx_spi.o
-                0x0800022c                SPI_ReceiveData8
+                0x08000244        0x8 ..\obj\stm32f0xx_spi.o
+                0x08000244                SPI_ReceiveData8
+ .text.SPI_GetReceptionFIFOStatus
+                0x0800024c        0xc ..\obj\stm32f0xx_spi.o
+                0x0800024c                SPI_GetReceptionFIFOStatus
  .text.SPI_I2S_GetFlagStatus
-                0x08000234        0xc ..\obj\stm32f0xx_spi.o
-                0x08000234                SPI_I2S_GetFlagStatus
+                0x08000258        0xc ..\obj\stm32f0xx_spi.o
+                0x08000258                SPI_I2S_GetFlagStatus
  .text.SetSysClock1
-                0x08000240       0xb8 ..\obj\system_stm32f0xx_temp.o
-                0x08000240                SetSysClock
+                0x08000264       0xb8 ..\obj\system_stm32f0xx_temp.o
+                0x08000264                SetSysClock
  .text.SystemInit1
-                0x080002f8       0x64 ..\obj\system_stm32f0xx_temp.o
-                0x080002f8                SystemInit
-                0x080002f8                SystemInit1
+                0x0800031c       0x64 ..\obj\system_stm32f0xx_temp.o
+                0x0800031c                SystemInit
+                0x0800031c                SystemInit1
  .text.GPIO_Init
-                0x0800035c       0xbc ..\obj\stm32f0xx_gpio.o
-                0x0800035c                GPIO_Init
+                0x08000380       0xbc ..\obj\stm32f0xx_gpio.o
+                0x08000380                GPIO_Init
  .text.GPIO_SetBits
-                0x08000418        0x4 ..\obj\stm32f0xx_gpio.o
-                0x08000418                GPIO_SetBits
+                0x0800043c        0x4 ..\obj\stm32f0xx_gpio.o
+                0x0800043c                GPIO_SetBits
  .text.GPIO_ResetBits
-                0x0800041c        0x4 ..\obj\stm32f0xx_gpio.o
-                0x0800041c                GPIO_ResetBits
+                0x08000440        0x4 ..\obj\stm32f0xx_gpio.o
+                0x08000440                GPIO_ResetBits
  .text.GPIO_PinAFConfig
-                0x08000420       0x24 ..\obj\stm32f0xx_gpio.o
-                0x08000420                GPIO_PinAFConfig
+                0x08000444       0x24 ..\obj\stm32f0xx_gpio.o
+                0x08000444                GPIO_PinAFConfig
  .text.S23LC_Init
-                0x08000444      0x154 ..\obj\SPI23LCXXXX.o
-                0x08000444                S23LC_Init
+                0x08000468      0x154 ..\obj\SPI23LCXXXX.o
+                0x08000468                S23LC_Init
+ .text.S23_RByte
+                0x080005bc      0x100 ..\obj\SPI23LCXXXX.o
+                0x080005bc                S23_RByte
+ .text.S23_RWord
+                0x080006bc      0x1a4 ..\obj\SPI23LCXXXX.o
+                0x080006bc                S23_RWord
+ .text.S23_RDWord
+                0x08000860      0x208 ..\obj\SPI23LCXXXX.o
+                0x08000860                S23_RDWord
+ .text.S23_RFloat
+                0x08000a68        0x8 ..\obj\SPI23LCXXXX.o
+                0x08000a68                S23_RFloat
  .text.S23_WByte
-                0x08000598       0xe4 ..\obj\SPI23LCXXXX.o
-                0x08000598                S23_WByte
+                0x08000a70       0xe4 ..\obj\SPI23LCXXXX.o
+                0x08000a70                S23_WByte
  .text.S23_WWord
-                0x0800067c      0x178 ..\obj\SPI23LCXXXX.o
-                0x0800067c                S23_WWord
+                0x08000b54      0x178 ..\obj\SPI23LCXXXX.o
+                0x08000b54                S23_WWord
  .text.S23_WDWord
-                0x080007f4      0x1c8 ..\obj\SPI23LCXXXX.o
-                0x080007f4                S23_WDWord
+                0x08000ccc      0x1c8 ..\obj\SPI23LCXXXX.o
+                0x08000ccc                S23_WDWord
  .text.S23_WFloat
-                0x080009bc      0x1cc ..\obj\SPI23LCXXXX.o
-                0x080009bc                S23_WFloat
+                0x08000e94      0x1cc ..\obj\SPI23LCXXXX.o
+                0x08000e94                S23_WFloat
  .text.S23_SpeedTest
-                0x08000b88      0x154 ..\obj\SPI23LCXXXX.o
-                0x08000b88                S23_SpeedTest
+                0x08001060      0x154 ..\obj\SPI23LCXXXX.o
+                0x08001060                S23_SpeedTest
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -340,35 +345,35 @@ Linker script and memory map
  *(.rodata*)
  *(.eh_fram e*)
 
-.glue_7         0x08000cdc        0x0
+.glue_7         0x080011b4        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x08000cdc        0x0
+.glue_7t        0x080011b4        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x08000cdc        0x0
+.vfp11_veneer   0x080011b4        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x08000cdc        0x0
+.v4_bx          0x080011b4        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x08000cdc        0x0
+.iplt           0x080011b4        0x0
  .iplt          0x00000000        0x0 ..\obj\stm32f0xx_rcc.o
 
-.rel.dyn        0x08000cdc        0x0
+.rel.dyn        0x080011b4        0x0
  .rel.iplt      0x00000000        0x0 ..\obj\stm32f0xx_rcc.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08000cdc                __exidx_start = .
+                0x080011b4                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08000cdc                __exidx_end = .
-                0x08000cdc                __etext = .
-                0x08000cdc                _sidata = __etext
+                0x080011b4                __exidx_end = .
+                0x080011b4                __etext = .
+                0x080011b4                _sidata = __etext
 
-.data           0x20000000        0x0 load address 0x08000cdc
+.data           0x20000000        0x0 load address 0x080011b4
                 0x20000000                __data_start__ = .
                 0x20000000                _sdata = __data_start__
  *(vtable)
@@ -441,23 +446,23 @@ LOAD c:/program files (x86)/gnu tools arm embedded/4.8 2014q3/bin/../lib/gcc/arm
 END GROUP
 OUTPUT(STM32F0_SPIRAM.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x6689
+.debug_info     0x00000000     0x678a
  .debug_info    0x00000000      0xa4a ..\obj\stm32f0xx_rcc.o
- .debug_info    0x00000a4a      0x458 ..\obj\main.o
- .debug_info    0x00000ea2       0xb6 ..\obj\startup_stm32f0xx.o
- .debug_info    0x00000f58      0xb4a ..\obj\stm32f0xx_spi.o
- .debug_info    0x00001aa2      0x2fd ..\obj\system_stm32f0xx_temp.o
- .debug_info    0x00001d9f      0x6f3 ..\obj\stm32f0xx_gpio.o
- .debug_info    0x00002492     0x41f7 ..\obj\SPI23LCXXXX.o
+ .debug_info    0x00000a4a      0x4f9 ..\obj\main.o
+ .debug_info    0x00000f43       0xe6 ..\obj\startup_stm32f0xx.o
+ .debug_info    0x00001029      0xb4a ..\obj\stm32f0xx_spi.o
+ .debug_info    0x00001b73      0x2fd ..\obj\system_stm32f0xx_temp.o
+ .debug_info    0x00001e70      0x6f3 ..\obj\stm32f0xx_gpio.o
+ .debug_info    0x00002563     0x4227 ..\obj\SPI23LCXXXX.o
 
-.debug_abbrev   0x00000000      0xc5b
+.debug_abbrev   0x00000000      0xce6
  .debug_abbrev  0x00000000      0x2a3 ..\obj\stm32f0xx_rcc.o
- .debug_abbrev  0x000002a3      0x179 ..\obj\main.o
- .debug_abbrev  0x0000041c       0x12 ..\obj\startup_stm32f0xx.o
- .debug_abbrev  0x0000042e      0x1e5 ..\obj\stm32f0xx_spi.o
- .debug_abbrev  0x00000613      0x13f ..\obj\system_stm32f0xx_temp.o
- .debug_abbrev  0x00000752      0x1d2 ..\obj\stm32f0xx_gpio.o
- .debug_abbrev  0x00000924      0x337 ..\obj\SPI23LCXXXX.o
+ .debug_abbrev  0x000002a3      0x19f ..\obj\main.o
+ .debug_abbrev  0x00000442       0x12 ..\obj\startup_stm32f0xx.o
+ .debug_abbrev  0x00000454      0x1e5 ..\obj\stm32f0xx_spi.o
+ .debug_abbrev  0x00000639      0x13f ..\obj\system_stm32f0xx_temp.o
+ .debug_abbrev  0x00000778      0x1d2 ..\obj\stm32f0xx_gpio.o
+ .debug_abbrev  0x0000094a      0x39c ..\obj\SPI23LCXXXX.o
 
 .debug_loc      0x00000000     0x1d50
  .debug_loc     0x00000000      0x8dc ..\obj\stm32f0xx_rcc.o
@@ -491,28 +496,28 @@ OUTPUT(STM32F0_SPIRAM.elf elf32-littlearm)
  .debug_ranges  0x000002a8       0x70 ..\obj\stm32f0xx_gpio.o
  .debug_ranges  0x00000318      0x1c0 ..\obj\SPI23LCXXXX.o
 
-.debug_line     0x00000000     0x1992
- .debug_line    0x00000000      0x5bf ..\obj\stm32f0xx_rcc.o
- .debug_line    0x000005bf      0x1e1 ..\obj\main.o
- .debug_line    0x000007a0       0xb1 ..\obj\startup_stm32f0xx.o
- .debug_line    0x00000851      0x4ee ..\obj\stm32f0xx_spi.o
- .debug_line    0x00000d3f      0x1ea ..\obj\system_stm32f0xx_temp.o
- .debug_line    0x00000f29      0x328 ..\obj\stm32f0xx_gpio.o
- .debug_line    0x00001251      0x741 ..\obj\SPI23LCXXXX.o
+.debug_line     0x00000000     0x1b49
+ .debug_line    0x00000000      0x607 ..\obj\stm32f0xx_rcc.o
+ .debug_line    0x00000607      0x23f ..\obj\main.o
+ .debug_line    0x00000846       0xc9 ..\obj\startup_stm32f0xx.o
+ .debug_line    0x0000090f      0x536 ..\obj\stm32f0xx_spi.o
+ .debug_line    0x00000e45      0x202 ..\obj\system_stm32f0xx_temp.o
+ .debug_line    0x00001047      0x370 ..\obj\stm32f0xx_gpio.o
+ .debug_line    0x000013b7      0x792 ..\obj\SPI23LCXXXX.o
 
-.debug_str      0x00000000     0x1060
- .debug_str     0x00000000      0x683 ..\obj\stm32f0xx_rcc.o
-                                0x721 (size before relaxing)
- .debug_str     0x00000683      0x23f ..\obj\main.o
-                                0x382 (size before relaxing)
- .debug_str     0x000008c2      0x4a3 ..\obj\stm32f0xx_spi.o
-                                0x73a (size before relaxing)
- .debug_str     0x00000d65       0xb0 ..\obj\system_stm32f0xx_temp.o
-                                0x298 (size before relaxing)
- .debug_str     0x00000e15      0x16b ..\obj\stm32f0xx_gpio.o
-                                0x4ae (size before relaxing)
- .debug_str     0x00000f80       0xe0 ..\obj\SPI23LCXXXX.o
-                                0x5fe (size before relaxing)
+.debug_str      0x00000000     0x10f0
+ .debug_str     0x00000000      0x69b ..\obj\stm32f0xx_rcc.o
+                                0x739 (size before relaxing)
+ .debug_str     0x0000069b      0x281 ..\obj\main.o
+                                0x3c4 (size before relaxing)
+ .debug_str     0x0000091c      0x4bb ..\obj\stm32f0xx_spi.o
+                                0x752 (size before relaxing)
+ .debug_str     0x00000dd7       0xc8 ..\obj\system_stm32f0xx_temp.o
+                                0x2b0 (size before relaxing)
+ .debug_str     0x00000e9f      0x183 ..\obj\stm32f0xx_gpio.o
+                                0x4c6 (size before relaxing)
+ .debug_str     0x00001022       0xce ..\obj\SPI23LCXXXX.o
+                                0x616 (size before relaxing)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 ..\obj\stm32f0xx_rcc.o
