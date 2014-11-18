@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="4.4.1 -mcpu=cortex-m0 -mthumb -g -nostartfiles -Map=STM32F0_SPIRAM.map -O3 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\STM32F0_SPIRAM -TC:\CooCox\CoIDE\configuration\ProgramData\STM32F0_SPIRAM/arm-gcc-link.ld -g">
+      <target file="STM32F0_SPIRAM.elf" lastModified="149c49d362f">
+         <source file="..\obj\stm32f0xx_rcc.o" lastModified="149c49d2487"/>
+         <source file="..\obj\main.o" lastModified="149c49d2619"/>
+         <source file="..\obj\startup_stm32f0xx.o" lastModified="149c49d26c5"/>
+         <source file="..\obj\stm32f0xx_spi.o" lastModified="149c49d28eb"/>
+         <source file="..\obj\system_stm32f0xx_temp.o" lastModified="149c49d2af4"/>
+         <source file="..\obj\stm32f0xx_gpio.o" lastModified="149c49d2d86"/>
+         <source file="..\obj\SPI23LCXXXX.o" lastModified="149c49d3161"/>
+      </target>
+   </processor>
+</history>
